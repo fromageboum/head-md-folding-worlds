@@ -37,12 +37,17 @@ POV == Points of view. Describe all the POVs where the player can stand/float/be
 	+ Cracks
 	+ Things falling down
 	+ Animal scared sound
+	+ leaking sink
+	+ creaking door
+	+ clock
 
 ## State Machines
 - Module
     - Open
     - Closed
-- Cricri (Slug)
+- Cricri (Slug) 
+    - Alive
     - Idle
     - Moving to target
+    - Dead
 
