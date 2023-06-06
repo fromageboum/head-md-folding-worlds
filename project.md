@@ -31,7 +31,9 @@ POV == Points of view. Describe all the POVs where the player can stand/float/be
     + Background elements
     + HDRI scene
 - Gestures
-	+ Gaze
+	+ player hand holding flashlight
+	+ pointing
+	+ turning light on/off
 - Sounds
 	+ Footsteps
 	+ Cracks
@@ -41,7 +43,13 @@ POV == Points of view. Describe all the POVs where the player can stand/float/be
 	+ creaking door
 	+ clock
 
+## Module type
+
+- open after light
+- always stays open after light
+
 ## State Machines
+
 - Module
     - Open
     - Closed
