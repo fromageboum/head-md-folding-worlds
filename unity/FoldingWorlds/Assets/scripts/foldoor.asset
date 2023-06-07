@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: foldoor
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":0.0,"y":0.0},"zoom":1.0,"elements":[{"chainable":false,"parameterNames":["t"],"member":{"name":"GetComponentInChildren","parameterTypes":["System.Type"],"targetType":"UnityEngine.Component","targetTypeName":"UnityEngine.Component","$version":"A"},"defaultValues":{"target":null,"%t":null},"position":{"x":-243.0,"y":-186.0},"guid":"ac69773f-828a-44c5-9788-56493adae982","$version":"A","$type":"Unity.VisualScripting.InvokeMember"},{"chainable":false,"parameterNames":["name","value"],"member":{"name":"SetBool","parameterTypes":["System.String","System.Boolean"],"targetType":"UnityEngine.Animator","targetTypeName":"UnityEngine.Animator","$version":"A"},"defaultValues":{"target":null,"%name":{"$content":"","$type":"System.String"},"%value":{"$content":false,"$type":"System.Boolean"}},"position":{"x":50.0,"y":-204.0},"guid":"7ad810d2-3d77-4bab-9e21-30959abbbd12","$version":"A","$type":"Unity.VisualScripting.InvokeMember"},{"chainable":false,"parameterNames":["t"],"member":{"name":"GetComponentInChildren","parameterTypes":["System.Type"],"targetType":"UnityEngine.Component","targetTypeName":"UnityEngine.Component","$version":"A"},"defaultValues":{"target":null,"%t":null},"position":{"x":301.0,"y":-196.0},"guid":"1bf95fd6-c215-46fe-888e-f7587ce7e7ed","$version":"A","$type":"Unity.VisualScripting.InvokeMember"},{"defaultValues":{},"position":{"x":-401.0,"y":-89.0},"guid":"6017cda3-b789-496d-bff4-2920033cb696","$version":"A","$type":"Unity.VisualScripting.GraphInput"}],"$version":"A"}}'
+    _objectReferences: []
