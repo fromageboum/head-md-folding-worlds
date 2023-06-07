@@ -3,6 +3,7 @@ using UnityEngine.AI;
 using System.Collections;
 using System.Collections.Generic;
 using NavMeshBuilder = UnityEngine.AI.NavMeshBuilder;
+using System.Reflection;
 
 namespace Unity.AI.Navigation.Samples
 {
@@ -12,6 +13,8 @@ namespace Unity.AI.Navigation.Samples
     [DefaultExecutionOrder(-102)]
     public class LocalNavMeshBuilder : MonoBehaviour
     {
+        public int agentId = 0;
+
         /// <summary>
         /// The center of the build 
         /// </summary>
@@ -26,7 +29,7 @@ namespace Unity.AI.Navigation.Samples
         AsyncOperation m_Operation;
         NavMeshDataInstance m_Instance;
         List<NavMeshBuildSource> m_Sources = new List<NavMeshBuildSource>();
-    
+
         IEnumerator Start()
         {
             while (true)
@@ -55,7 +58,23 @@ namespace Unity.AI.Navigation.Samples
         void UpdateNavMesh(bool asyncUpdate = false)
         {
             NavMeshSourceTag.Collect(ref m_Sources);
-            var defaultBuildSettings = NavMesh.GetSettingsByID(0);
+            var defaultBuildSettings = NavMesh.GetSettingsByIndex(agentId);
+
+            /*
+            Debug.Log("The navigation id");
+            
+            PropertyInfo[] properties = defaultBuildSettings.GetType().GetProperties();
+
+            foreach (PropertyInfo property in properties)
+            {
+                Debug.Log("Name: " + property.Name + ", Value: " + property.GetValue(defaultBuildSettings, null));
+            }
+
+            Debug.Log("TIBOR - These are the build settings");
+            Debug.Log(defaultBuildSettings);
+            Debug.Log("-------------------");
+            */
+
             var bounds = QuantizedBounds();
     
             if (asyncUpdate)
