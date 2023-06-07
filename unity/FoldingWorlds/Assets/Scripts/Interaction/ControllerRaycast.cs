@@ -16,9 +16,6 @@ public class ControllerRaycast : MonoBehaviour
 
     private void Start()
     {
-        rayInteractor = GetComponent<XRRayInteractor>();
-        lineVisual = GetComponent<XRInteractorLineVisual>();
-
         Assert.IsNotNull(movementTarget);
     }
 
@@ -31,6 +28,9 @@ public class ControllerRaycast : MonoBehaviour
 
     private void OnEnable()
     {
+        rayInteractor = GetComponent<XRRayInteractor>();
+        lineVisual = GetComponent<XRInteractorLineVisual>();
+
         lineVisual.enabled = true;
         rayInteractor.enabled = true;
     }
