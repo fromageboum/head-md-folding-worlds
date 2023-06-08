@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tests/08-ScaleVRTo10x.unity
-    guid: 409d0e3af732649f9a8352d9f606c9dd
+    path: Assets/Scenes/scans.unity
+    guid: 282ec40f4bfb3e04a8be70b89f902c71
   - enabled: 1
-    path: Assets/Scenes/Tests/07-XRInteractionWithAnimation.unity
-    guid: 94af494a83d834e808aa2b91f2bc8e68
+    path: Assets/Scenes/Tests/04-XRInteractiontDemoScene.unity
+    guid: 9e8a286796599499db69ffb1f925f228
   - enabled: 1
     path: Assets/Scenes/Tests/05-XRInteractionDynamicNavMesh.unity
     guid: 6e34a678f40f04138acd55738a7a02b3
