@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Tests/04-XRInteractiontDemoScene.unity
+    guid: 9e8a286796599499db69ffb1f925f228
+  - enabled: 1
     path: Assets/Scenes/Tests/05-XRInteractionDynamicNavMesh.unity
     guid: 6e34a678f40f04138acd55738a7a02b3
   - enabled: 1
