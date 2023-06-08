@@ -69,7 +69,7 @@ using System.Collections.Generic;
                 s.area = 0;
                 sources.Add(s);
             }
-    
+
             for (var i = 0; i < m_Terrains.Count; ++i)
             {
                 var t = m_Terrains[i];

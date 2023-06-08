@@ -30,6 +30,13 @@ namespace Unity.AI.Navigation.Samples
         NavMeshDataInstance m_Instance;
         List<NavMeshBuildSource> m_Sources = new List<NavMeshBuildSource>();
 
+        public float minRegionArea = 2f;
+        public bool overrideVoxelSize = false;
+        public float voxelSize = 0.0166f;
+        public bool overrideTileSize = false;
+        public int tileSize = 256;
+        public bool preserveTilesOutsideBounds = false;
+
         IEnumerator Start()
         {
             while (true)
@@ -57,8 +64,24 @@ namespace Unity.AI.Navigation.Samples
     
         void UpdateNavMesh(bool asyncUpdate = false)
         {
+            //Debug.Log("Update nav mesh");
             NavMeshSourceTag.Collect(ref m_Sources);
-            var defaultBuildSettings = NavMesh.GetSettingsByIndex(agentId);
+            var dbs = NavMesh.GetSettingsByIndex(agentId);
+
+            dbs.minRegionArea = minRegionArea;
+            dbs.overrideVoxelSize = overrideVoxelSize;
+            dbs.voxelSize = voxelSize;
+            dbs.overrideTileSize = overrideTileSize;
+            dbs.tileSize = tileSize;
+            dbs.preserveTilesOutsideBounds = preserveTilesOutsideBounds;
+            /*
+            minRegionArea = dbs.minRegionArea;
+            overrideVoxelSize = dbs.overrideVoxelSize;
+            voxelSize = dbs.voxelSize;
+            overrideTileSize = dbs.overrideTileSize;
+            tileSize = dbs.tileSize;
+            preserveTilesOutsideBounds = dbs.preserveTilesOutsideBounds;
+            */
 
             /*
             Debug.Log("The navigation id");
@@ -78,9 +101,9 @@ namespace Unity.AI.Navigation.Samples
             var bounds = QuantizedBounds();
     
             if (asyncUpdate)
-                m_Operation = NavMeshBuilder.UpdateNavMeshDataAsync(m_NavMesh, defaultBuildSettings, m_Sources, bounds);
+                m_Operation = NavMeshBuilder.UpdateNavMeshDataAsync(m_NavMesh, dbs, m_Sources, bounds);
             else
-                NavMeshBuilder.UpdateNavMeshData(m_NavMesh, defaultBuildSettings, m_Sources, bounds);
+                NavMeshBuilder.UpdateNavMeshData(m_NavMesh, dbs, m_Sources, bounds);
         }
     
         static Vector3 Quantize(Vector3 v, Vector3 quant)
@@ -109,10 +132,10 @@ namespace Unity.AI.Navigation.Samples
             Gizmos.color = Color.yellow;
             var bounds = QuantizedBounds();
             Gizmos.DrawWireCube(bounds.center, bounds.size);
-    
+    /*
             Gizmos.color = Color.green;
             var center = m_Tracked ? m_Tracked.position : transform.position;
-            Gizmos.DrawWireCube(center, m_Size);
+            Gizmos.DrawWireCube(center, m_Size);*/
         }
     }
 }
