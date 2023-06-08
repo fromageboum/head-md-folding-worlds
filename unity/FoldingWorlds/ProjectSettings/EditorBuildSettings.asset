@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Tests/09-AnimationIntegration.unity
+    guid: d2f061751c9a44634a67e3c6f0d06d12
+  - enabled: 1
     path: Assets/Scenes/scans.unity
     guid: 282ec40f4bfb3e04a8be70b89f902c71
   - enabled: 1
