@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Tile : MonoBehaviour
 {
+    [SerializeField]
     private bool crossable;
+    private bool inContactWithPlayer;
+
     bool pointedByController;
 
     XRSimpleInteractable xrSimpleInteractable;
@@ -22,13 +26,27 @@ public class Tile : MonoBehaviour
         set
         {
             crossable = value;
-            meshRenderer.material.color = value ? Color.green : Color.red;
+            if (meshRenderer != null) {
+                meshRenderer.material.color = value ? Color.green : Color.red;
+
+            }
 
             if (navMeshSourceTag != null)
             {
                 navMeshSourceTag.enabled = value;
             }
         }
+    }
+
+    private void Start()
+    {
+        Crossable = crossable; // Trigger the setter
+    }
+
+    // This method is called whenever a script is loaded or a value is changed in the Inspector.
+    private void OnValidate()
+    {
+        Crossable = crossable; // Trigger the setter
     }
 
     private void OnEnable()
@@ -49,7 +67,6 @@ public class Tile : MonoBehaviour
 
     public void CloseTile()
     {
-        //meshRenderer.material.color = Color.red;
         if (animator != null) {
             animator.SetBool("open", false);
         }
@@ -60,6 +77,7 @@ public class Tile : MonoBehaviour
     {
         Debug.Log("The tile is fully open");
     }
+
 
 
 }

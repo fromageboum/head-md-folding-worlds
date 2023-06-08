@@ -24,10 +24,28 @@ public class AlwaysOpenTile : MonoBehaviour
         tile.OpenTile();
     }
 
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawSphere(transform.position, 0.1f);
+
+        Vector3 globalScale = GetGlobalScale(transform);
+        float objectSize = globalScale.magnitude;
+        float sphereRadius = objectSize * 0.1f;  // 10% of object's size
+
+        //Gizmos.DrawSphere(transform.position, sphereRadius);
+    }
+
+    private Vector3 GetGlobalScale(Transform transform)
+    {
+        if (transform.parent == null)
+        {
+            return transform.localScale;
+        }
+        else
+        {
+            return Vector3.Scale(transform.parent.lossyScale, transform.localScale);
+        }
     }
 
 }
