@@ -2104,6 +2104,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "FoldingWorldsActions",
+            "id": "f79f539f-57b5-4d69-bd2b-b04621453cda",
+            "actions": [
+                {
+                    "name": "FPSCounterShow",
+                    "type": "Button",
+                    "id": "4dbd0831-c0fd-42e1-ac7f-495e0bbb2447",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a465a969-6843-4c62-aedd-e8c5c84b5d50",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FPSCounterShow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

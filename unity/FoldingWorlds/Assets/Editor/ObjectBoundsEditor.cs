@@ -8,6 +8,7 @@ using static UnityEngine.GraphicsBuffer;
 [CustomEditor(typeof(Transform))]
 public class ObjectBoundsEditor : Editor
 {
+    /*
     public override void OnInspectorGUI()
     {
         Transform transform = (Transform)target;
@@ -22,6 +23,6 @@ public class ObjectBoundsEditor : Editor
 
         // Draw the rest of the inspector as usual
         DrawDefaultInspector();
-    }
+    }*/
 }
 
