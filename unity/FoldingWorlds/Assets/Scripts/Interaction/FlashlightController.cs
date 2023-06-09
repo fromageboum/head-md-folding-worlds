@@ -17,6 +17,7 @@ public class FlashlightController : MonoBehaviour
 
     void Update()
     {
+
         if (controller.activateAction.action.triggered) {
             lightOn = !lightOn;
             controllerRaycast.enabled = lightOn;
