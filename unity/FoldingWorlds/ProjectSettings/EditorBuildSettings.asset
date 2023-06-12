@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Tests/11-FlashLightTest.unity
+    guid: d1a82015cf1794a2180c3c542bdd8d46
+  - enabled: 1
     path: Assets/Scenes/Tests/10-PostProcessingTest.unity
     guid: 07f30cd99c72f430fba58a323797b3bb
   - enabled: 1
