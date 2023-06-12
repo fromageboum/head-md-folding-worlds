@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4885289241557004431, guid: 2eedc7ca668cae24f9cf2c2dcebffad9, type: 3}
       propertyPath: m_Name
-      value: modelmurPREFAB (1) Variant
+      value: modelPORTE PREFAB
       objectReference: {fileID: 0}
     - target: {fileID: 5226383396069616181, guid: 2eedc7ca668cae24f9cf2c2dcebffad9, type: 3}
       propertyPath: m_RootOrder
@@ -58,6 +58,6 @@ PrefabInstance:
     - target: {fileID: 5400102078474202106, guid: 2eedc7ca668cae24f9cf2c2dcebffad9, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1008933464932562307, guid: 1476be9bb8ab2bd48932c0764f057c91, type: 3}
+      objectReference: {fileID: 1008933464932562307, guid: ba0dedfbefdb14848bee3e5b7b0d7d24, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eedc7ca668cae24f9cf2c2dcebffad9, type: 3}
