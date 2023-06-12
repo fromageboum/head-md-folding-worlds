@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using VLB;
 
 public class FlashlightController : MonoBehaviour
 {
 
     public InputActionReference primaryButtonRef;
     Light _light;
+    VolumetricLightBeamSD volumetricLightBeam;
 
     private void Start()
     {
         _light = GetComponentInChildren<Light>();
+        volumetricLightBeam = GetComponentInChildren<VolumetricLightBeamSD>();
     }
 
     private void OnEnable()
@@ -26,8 +29,8 @@ public class FlashlightController : MonoBehaviour
 
     private void Toggle(InputAction.CallbackContext callbackContext)
     {
-        //Debug.Log("PRIMARY BUTTON PRESSED");
         _light.enabled = !_light.enabled;
+        volumetricLightBeam.enabled = _light.enabled;
     }
 
 }
