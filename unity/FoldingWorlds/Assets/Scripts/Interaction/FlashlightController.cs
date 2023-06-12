@@ -1,27 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
-using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
+using VLB;
 
 public class FlashlightController : MonoBehaviour
 {
-    public ActionBasedController controller = null; // Assign your XRController here in the inspector
-    ControllerRaycast controllerRaycast;
-    bool lightOn = true;
+
+    public InputActionReference primaryButtonRef;
+    Light _light;
+    VolumetricLightBeamSD volumetricLightBeam;
 
     private void Start()
     {
-        controllerRaycast = GetComponent<ControllerRaycast>();
+        _light = GetComponentInChildren<Light>();
+        volumetricLightBeam = GetComponentInChildren<VolumetricLightBeamSD>();
     }
 
-    void Update()
+    private void OnEnable()
     {
-
-        if (controller.activateAction.action.triggered) {
-            lightOn = !lightOn;
-            controllerRaycast.enabled = lightOn;
-            Debug.Log("Primary button was pressed.");
-        }
+        primaryButtonRef.action.started += Toggle;
     }
+
+    private void OnDisable()
+    {
+        primaryButtonRef.action.started -= Toggle;
+    }
+
+    private void Toggle(InputAction.CallbackContext callbackContext)
+    {
+        _light.enabled = !_light.enabled;
+        volumetricLightBeam.enabled = _light.enabled;
+    }
+
 }
