@@ -16,7 +16,7 @@ public class Tile : MonoBehaviour
 
     MeshRenderer meshRenderer;
     NavMeshSourceTag navMeshSourceTag;
-    Animator animator;
+    List<Animator> animators;
 
     public bool Crossable {
         get
@@ -54,30 +54,64 @@ public class Tile : MonoBehaviour
         meshRenderer = GetComponent<MeshRenderer>();
         navMeshSourceTag = GetComponent<NavMeshSourceTag>();
         xrSimpleInteractable = GetComponent<XRSimpleInteractable>();
-        animator = GetComponentInChildren<Animator>();
+        animators = new List<Animator>(GetComponentsInChildren<Animator>());
     }
 
     public void OpenTile()
     {
-        if (animator != null) {
-            animator.SetBool("open", true);
+        foreach (Animator animator in animators)
+        {
+            if (animator != null)
+            {
+                animator.SetBool("open", true);
+            }
         }
-        Crossable = true;
+        //Crossable = true;
     }
 
     public void CloseTile()
     {
-        if (animator != null) {
-            animator.SetBool("open", false);
+        foreach (Animator animator in animators)
+        {
+            if (animator != null)
+            {
+                animator.SetBool("open", false);
+            }
         }
         Crossable = false;
     }
 
-    public void OnTileFullyOpen()
+
+    private void Update()
     {
-        Debug.Log("The tile is fully open");
+        CheckAnimatorsState();
     }
 
+    private void CheckAnimatorsState()
+    {
+        bool allAnimatorsOpened = true;
+        foreach (Animator animator in animators)
+        {
+            if (animator != null)
+            {
+                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("wa_opened"))
+                {
+                    allAnimatorsOpened = false;
+
+                    if (Crossable != false) {
+                        Crossable = false;
+                    }
+
+                    break;
+                }
+            }
+        }
+
+        if (allAnimatorsOpened)
+        {
+            Crossable = true;
+        }
+    }
 
 
 }

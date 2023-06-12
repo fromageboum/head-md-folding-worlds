@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436017466530068869}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -37,7 +37,7 @@ Transform:
   - {fileID: 4430630101151273919}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &770113724330395070
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,6 +874,30 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.485
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623948089445105020, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: m_Intensity
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623948089445105020, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: m_SpotAngle
+      value: 24.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623948089445105020, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512609612424794312, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: spotAngle
+      value: 24.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512609612424794312, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: intensityInside
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512609612424794312, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: intensityOutside
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
