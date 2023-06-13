@@ -1,10 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "dev": "npm run prapare && next",
+    "dev": "npm run prepare && next",
     "build": "npm run prepare && next build",
     "start": "next start",
-    "prepare": "cp -R ../devlog/img ./pages && cp -R ../devlog/3d ./pages && node ./scripts/concat.js ../devlog ./pages/index.md"
+    "prepare": "cp -R ../devlog/img ./pages && cp -R ../devlog/3d ./pages && node ./scripts/concat.js ../devlog ./pages/index.mdx"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
