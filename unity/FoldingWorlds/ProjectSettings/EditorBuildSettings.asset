@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Tests/14-RealtimeLights.unity
+    guid: a4db8db798cbb4e45a128b649a9fe4e6
+  - enabled: 1
+    path: Assets/Scenes/Tests/15-VolumetricScene.unity
+    guid: faa0edef85f374544a102fa9d4aa1f4f
+  - enabled: 1
     path: Assets/Scenes/Tests/13-ModulesAndFlashlight.unity
-    guid: 4bbe2b80014a04b3d912f5b03261fdc7
+    guid: a9747fb9843e3e74fafa7b7ef17c4454
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4df06fcb9f20143f2b73d83d217da3a2, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8e56b6630ee474f74862808c81f98e8e, type: 2}

@@ -876,16 +876,48 @@ PrefabInstance:
       value: -0.485
       objectReference: {fileID: 0}
     - target: {fileID: 4623948089445105020, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.763172
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623948089445105020, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623948089445105020, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.92205936
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623948089445105020, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
       propertyPath: m_Intensity
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4623948089445105020, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
       propertyPath: m_SpotAngle
       value: 24.8
       objectReference: {fileID: 0}
     - target: {fileID: 4623948089445105020, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623948089445105020, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
       propertyPath: m_InnerSpotAngle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623948089445105020, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512609612424794312, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: color.b
+      value: 0.763172
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512609612424794312, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: color.g
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512609612424794312, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
+      propertyPath: color.r
+      value: 0.92205936
       objectReference: {fileID: 0}
     - target: {fileID: 7512609612424794312, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
       propertyPath: spotAngle
@@ -893,11 +925,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7512609612424794312, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
       propertyPath: intensityInside
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7512609612424794312, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
       propertyPath: intensityOutside
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b694b8ec5c41f6247843a2b67222fda6, type: 3}
@@ -923,11 +955,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb43fff075aa0b4b995dcfaed06dc44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateRate: 8
+  updateRate: 4
   waitXFrames: 3
   layerMask:
     serializedVersion: 2
     m_Bits: 1
   useOcclusionCulling: 1
-  depthMapResolution: 128
-  fadeDistanceToSurface: 0
+  depthMapResolution: 256
+  fadeDistanceToSurface: 14.22
