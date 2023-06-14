@@ -1,0 +1,23 @@
+{
+  "prompt_text": "Realistic pink paper with pastel color like recyclable paper",
+  "patch": {
+    "ext": "png",
+    "dtype": "uint8",
+    "width": 512,
+    "height": 512,
+    "url": "https://static-dev.withpoly.com/v3/textures/patches/28655904-d256-474c-98e5-b464f813700e.png",
+    "patch_id": "4mpybmqMYi"
+  },
+  "seamless_prompt_text": "Realistic pink paper with pastel color like recyclable paper",
+  "seamless_patch_scale": 0.8,
+  "upscale_prompt_text": "Realistic pink paper with pastel color like recyclable paper",
+  "upscale_resolution": 2048,
+  "is_seamless": true,
+  "pbr_mode": "matte",
+  "pbr_generate_color": false,
+  "pbr_generate_normal": true,
+  "pbr_generate_height": true,
+  "pbr_generate_ao": true,
+  "pbr_generate_roughness": true,
+  "pbr_generate_metallic": false
+}

@@ -1,0 +1,23 @@
+{
+  "prompt_text": "papergrid, extreme fine details, close up, school book,",
+  "patch": {
+    "ext": "png",
+    "dtype": "uint8",
+    "width": 512,
+    "height": 512,
+    "url": "https://static-dev.withpoly.com/v3-voronoi/textures/patches/09d809e6-b690-42ca-800a-9ed03eab28f5.png",
+    "patch_id": "FDVPKBLxe8"
+  },
+  "seamless_prompt_text": "papergrid, extreme fine details, close up, school book,",
+  "seamless_patch_scale": 1.0,
+  "upscale_prompt_text": "papergrid, extreme fine details, close up, school book,",
+  "upscale_resolution": 4096,
+  "is_seamless": true,
+  "pbr_mode": "matte",
+  "pbr_generate_color": true,
+  "pbr_generate_normal": true,
+  "pbr_generate_height": false,
+  "pbr_generate_ao": true,
+  "pbr_generate_roughness": true,
+  "pbr_generate_metallic": false
+}
