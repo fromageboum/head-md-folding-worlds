@@ -651,14 +651,14 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.45888352
-      value: 0.52422774
-      inSlope: 0.013778666
-      outSlope: 0.013778666
+      time: 0.5088408
+      value: 0.5019728
+      inSlope: -0.0059656547
+      outSlope: -0.0059656547
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.45353496
+      outWeight: 0.42263532
     - serializedVersion: 3
       time: 0.9991679
       value: 0.0023550391
@@ -2252,6 +2252,10 @@ PrefabInstance:
     - target: {fileID: 4432386512135702456, guid: 6aa59f8bc0e89a241b52f2da2f664323, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432386512135702456, guid: 6aa59f8bc0e89a241b52f2da2f664323, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5641213855595042541, guid: 6aa59f8bc0e89a241b52f2da2f664323, type: 3}
       propertyPath: m_LocalPosition.x

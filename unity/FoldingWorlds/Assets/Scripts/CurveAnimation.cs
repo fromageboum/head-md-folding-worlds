@@ -6,14 +6,13 @@ public class CurveAnimation : MonoBehaviour
     public float duration = 1f;
     public float randomValueRange = 0.5f;
 
-    private float timer;
+    private float timer = 1;
     private float currentValue;
     private float targetValue;
 public AnimationCurve c;
 float initialRotation;
     private void Start()
     {
-        Debug.Log("hello");
         initialRotation = transform.eulerAngles.y;
 
     }

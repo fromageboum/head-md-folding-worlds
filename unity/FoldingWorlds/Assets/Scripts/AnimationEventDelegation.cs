@@ -11,7 +11,7 @@ public class AnimationEventDelegation : MonoBehaviour
         curveAnimation = GetComponentInChildren<CurveAnimation>();
     }
     public void StartRandomRotation(){
-            Debug.Log("hepiro"); 
+            Debug.Log("HI"); 
         curveAnimation.StartAnimation();
     }
 
