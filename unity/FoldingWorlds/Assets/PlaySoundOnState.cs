@@ -12,7 +12,7 @@ public class PlaySoundOnState : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        RandomSound randomSound = animator.GetComponent<RandomSound>();
+        RandomSound randomSound = animator.GetComponentInParent<RandomSound>();
         Debug.Log("on enter state state behaviour");
 
         if (randomSound != null)
