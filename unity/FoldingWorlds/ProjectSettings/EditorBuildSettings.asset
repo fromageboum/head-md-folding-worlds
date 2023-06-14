@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Tests/16-AudioIntegrations.unity
+    guid: 2078a99cff8054247a0fc6650217fc25
+  - enabled: 1
     path: Assets/Scenes/Tests/14-RealtimeLights.unity
     guid: a4db8db798cbb4e45a128b649a9fe4e6
   - enabled: 1
