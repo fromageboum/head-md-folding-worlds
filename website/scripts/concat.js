@@ -14,7 +14,7 @@ const inputFiles = fs.readdirSync(directory)
 
 inputFiles.forEach(inputFile => {
     let data = fs.readFileSync(path.join(directory, inputFile), 'utf8');
-    output += data + '\n';
+    output += '\n' + data;
 });
 
 fs.writeFileSync(output_file, output);
