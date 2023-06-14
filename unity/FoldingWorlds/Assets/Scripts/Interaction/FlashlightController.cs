@@ -10,11 +10,13 @@ public class FlashlightController : MonoBehaviour
     public InputActionReference primaryButtonRef;
     Light _light;
     VolumetricLightBeamSD volumetricLightBeam;
+    AudioSource audioSource;
 
     private void Start()
     {
         _light = GetComponentInChildren<Light>();
         volumetricLightBeam = GetComponentInChildren<VolumetricLightBeamSD>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -31,6 +33,7 @@ public class FlashlightController : MonoBehaviour
     {
         _light.enabled = !_light.enabled;
         volumetricLightBeam.enabled = _light.enabled;
+        audioSource.Play();
     }
 
 }

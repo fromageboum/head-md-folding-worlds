@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1476be9bb8ab2bd48932c0764f057c91, type: 3}
       propertyPath: m_Name
-      value: modelporte1
+      value: door_prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887312569341566711, guid: 1476be9bb8ab2bd48932c0764f057c91, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1476be9bb8ab2bd48932c0764f057c91, type: 3}
@@ -83,3 +87,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &794924757453383463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020663534471711012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dced404add5634e44afb9c8e144f4ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 31a145d59435b4cfb882d283db8238d5, type: 3}
+  - {fileID: 8300000, guid: 51a5fea2435c04ba69e9ecbd9c4fd231, type: 3}
+  - {fileID: 8300000, guid: 5404302db8c384913902c90e57f69b50, type: 3}
+  - {fileID: 8300000, guid: cd6880ab874534e8e95d35682ac16965, type: 3}
+  - {fileID: 8300000, guid: c89a2d5d429be46abb74f093430b256f, type: 3}
