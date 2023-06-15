@@ -44,8 +44,8 @@ public class GranularSynth : MonoBehaviour
 
     IEnumerator _FUpSound() {
         Preset p = Preset.CreateRandomPreset(this);
-        TransitionToPreset(p, 3f);
-        yield return new WaitForSeconds(5f);
+        TransitionToPreset(p, 1f);
+        yield return new WaitForSeconds(3f);
         TransitionToPreset(normalPreset, 1f);
         yield return new WaitForSeconds(1f);
     }
