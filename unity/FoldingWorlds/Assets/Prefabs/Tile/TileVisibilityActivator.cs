@@ -39,7 +39,7 @@ public class TileVisibilityActivator : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = !targetVisibility ? Color.red : Color.green;
         Gizmos.DrawWireCube(GetComponent<Collider>().bounds.center, GetComponent<Collider>().bounds.size);
