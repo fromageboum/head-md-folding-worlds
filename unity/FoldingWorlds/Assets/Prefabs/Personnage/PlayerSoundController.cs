@@ -23,16 +23,12 @@ public class PlayerSoundController : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(minTimeSoundTriggerTime, maxTimeSoundTriggerTime));
 
-            Debug.Log("Trigger");
-
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("idle"))
             {
-                Debug.Log("Play random sound idle");
                 randomSoundIdle.PlayRandomSound();
             }
             else if (animator.GetCurrentAnimatorStateInfo(0).IsName("walk 1"))
             {
-                Debug.Log("Play random sound walk 1");
                 randomSoundMoving.PlayRandomSound();
             }
         }
