@@ -1007,7 +1007,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191079046}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -4166,6 +4166,26 @@ MonoBehaviour:
   envSd: 0.125
   envelopeOn: 0
   showGUI: 0
+  normalPreset:
+    playbackSpeed: 1
+    grainSize: 1000
+    grainStep: 1
+    guiPlaybackSpeed: 1
+    guiGrainSize: 1000
+    guiGrainStep: 1
+    envMean: 0.5
+    envSd: 0.125
+    envelopeOn: 0
+  fUpPreset:
+    playbackSpeed: 1
+    grainSize: 920
+    grainStep: -435
+    guiPlaybackSpeed: 0
+    guiGrainSize: 0
+    guiGrainStep: 0
+    envMean: 0
+    envSd: 0
+    envelopeOn: 0
 --- !u!4 &1057678573
 Transform:
   m_ObjectHideFlags: 0

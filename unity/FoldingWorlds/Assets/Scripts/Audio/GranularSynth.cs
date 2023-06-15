@@ -25,12 +25,27 @@ public class GranularSynth : MonoBehaviour
 
     public bool showGUI = false;
 
+    public Preset normalPreset;
+    public Preset fUpPreset;
+
     private void Awake()
     {
         sampleLength = clip.samples;
         samples = new float[clip.samples * clip.channels];
         clip.GetData(samples, 0);
     }
+
+    private IEnumerator Start()
+    {
+        while (true) {
+            TransitionToPreset(fUpPreset);
+            yield return new WaitForSeconds(1f);
+            TransitionToPreset(normalPreset);
+            yield return new WaitForSeconds(5f);
+
+        }
+    }
+
 
     private void Update()
     {
@@ -118,4 +133,51 @@ public class GranularSynth : MonoBehaviour
         float exponent = -Mathf.Pow(x - mean, 2) / (2 * Mathf.Pow(standardDeviation, 2));
         return firstPart * Mathf.Exp(exponent);
     }
+
+    public IEnumerator InterpolateToPreset(Preset preset, float duration)
+    {
+        Preset startPreset = new Preset(this);
+
+        float startTime = Time.time;
+        while (Time.time - startTime < duration)
+        {
+            float t = (Time.time - startTime) / duration;
+
+            playbackSpeed = (int)Mathf.Lerp(startPreset.playbackSpeed, preset.playbackSpeed, t);
+            grainSize = (int)Mathf.Lerp(startPreset.grainSize, preset.grainSize, t);
+            grainStep = (int)Mathf.Lerp(startPreset.grainStep, preset.grainStep, t);
+
+            guiPlaybackSpeed = Mathf.Lerp(startPreset.guiPlaybackSpeed, preset.guiPlaybackSpeed, t);
+            guiGrainSize = Mathf.Lerp(startPreset.guiGrainSize, preset.guiGrainSize, t);
+            guiGrainStep = Mathf.Lerp(startPreset.guiGrainStep, preset.guiGrainStep, t);
+
+            envMean = Mathf.Lerp(startPreset.envMean, preset.envMean, t);
+            envSd = Mathf.Lerp(startPreset.envSd, preset.envSd, t);
+            envelopeOn = t < 0.5 ? startPreset.envelopeOn : preset.envelopeOn;
+
+            yield return null;
+        }
+
+        // Make sure the final state is exactly the preset state.
+        playbackSpeed = preset.playbackSpeed;
+        grainSize = preset.grainSize;
+        grainStep = preset.grainStep;
+
+        guiPlaybackSpeed = preset.guiPlaybackSpeed;
+        guiGrainSize = preset.guiGrainSize;
+        guiGrainStep = preset.guiGrainStep;
+
+        envMean = preset.envMean;
+        envSd = preset.envSd;
+        envelopeOn = preset.envelopeOn;
+    }
+
+    public void TransitionToPreset(Preset preset)
+    {
+        StartCoroutine(InterpolateToPreset(preset, 1f)); // 1 second duration
+    }
+
+
+
+
 }
