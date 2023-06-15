@@ -94,7 +94,7 @@ public class Tile : MonoBehaviour
         {
             if (animator != null)
             {
-                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("wa_opened"))
+                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("REopened"))
                 {
                     allAnimatorsOpened = false;
 

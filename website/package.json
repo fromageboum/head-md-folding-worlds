@@ -4,7 +4,7 @@
     "dev": "npm run prepare && next",
     "build": "npm run prepare && next build",
     "start": "next start",
-    "prepare": "cp -R ../devlog/img ./pages && cp -R ../devlog/3d ./pages && node ./scripts/concat.js ../devlog ./pages/index.mdx"
+    "prepare": "cp -R ../devlog/img/*.mp4 ./public/img/ && cp -R ../devlog/img/*.mov ./public/img/ && cp -R ../devlog/img ./pages && cp -R ../devlog/3d ./pages && node ./scripts/concat.js ../devlog ./pages/index.mdx"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
