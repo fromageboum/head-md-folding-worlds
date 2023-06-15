@@ -32,6 +32,8 @@ public class TileVisibilityActivator : MonoBehaviour
     IEnumerator _TriggerVisibility()
     {
         yield return new WaitForSeconds(delay);
+        GranularSynth.instance.FuckUpSound();
+
         foreach (Tile tile in tiles)
         {
             tile.Hidden = !targetVisibility;

@@ -1,3 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 [System.Serializable]
 public class Preset
 {
@@ -26,5 +30,15 @@ public class Preset
         envMean = synth.envMean;
         envSd = synth.envSd;
         envelopeOn = synth.envelopeOn;
+    }
+
+    public static Preset CreateRandomPreset(GranularSynth synth) {
+        Preset p = new Preset(synth);
+
+        //p.playbackSpeed = (int)Random.Range(-1.0f, 1.0f);
+        p.grainSize = (int)Random.Range(1000.0f, 1300.0f);
+        p.grainStep = (int)Random.Range(-50.0f, 50.0f);
+
+        return p; 
     }
 }

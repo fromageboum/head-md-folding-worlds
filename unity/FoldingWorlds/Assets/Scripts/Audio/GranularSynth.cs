@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GranularSynth : MonoBehaviour
 {
+    public static GranularSynth instance;
+
     public AudioClip clip;
     public int playbackSpeed = 1;
     public int grainSize = 1000;
@@ -30,23 +32,24 @@ public class GranularSynth : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         sampleLength = clip.samples;
         samples = new float[clip.samples * clip.channels];
         clip.GetData(samples, 0);
     }
 
-    private IEnumerator Start()
-    {
-        while (true) {
-            TransitionToPreset(fUpPreset);
-            yield return new WaitForSeconds(1f);
-            TransitionToPreset(normalPreset);
-            yield return new WaitForSeconds(5f);
-
-        }
+    public void FuckUpSound() {
+        StartCoroutine(_FUpSound());
     }
 
-
+    IEnumerator _FUpSound() {
+        Preset p = Preset.CreateRandomPreset(this);
+        TransitionToPreset(p, 3f);
+        yield return new WaitForSeconds(5f);
+        TransitionToPreset(normalPreset, 1f);
+        yield return new WaitForSeconds(1f);
+    }
+    
     private void Update()
     {
         if (showGUI)
@@ -73,9 +76,9 @@ public class GranularSynth : MonoBehaviour
             GUILayout.FlexibleSpace();
             if (GUILayout.Button("RANDOMIZE!"))
             {
-                guiPlaybackSpeed = Random.Range(-2.0f, 2.0f);
-                guiGrainSize = Random.Range(200.0f, 1000.0f);
-                guiGrainStep = Random.Range(-1500.0f, 1500.0f);
+                guiPlaybackSpeed = Random.Range(-1.0f, 1.0f);
+                guiGrainSize = Random.Range(1000.0f, 1300.0f);
+                guiGrainStep = Random.Range(-50.0f, 50.0f);
             }
             GUILayout.FlexibleSpace();
             GUILayout.EndArea();
@@ -172,12 +175,9 @@ public class GranularSynth : MonoBehaviour
         envelopeOn = preset.envelopeOn;
     }
 
-    public void TransitionToPreset(Preset preset)
+    public void TransitionToPreset(Preset preset, float t)
     {
-        StartCoroutine(InterpolateToPreset(preset, 1f)); // 1 second duration
+        StartCoroutine(InterpolateToPreset(preset, t)); // 1 second duration
     }
-
-
-
 
 }
