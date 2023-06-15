@@ -13,6 +13,8 @@ public class LevelFinished : MonoBehaviour
             levelManager.OnLevelFinished();
             Collider collider = GetComponent<Collider>();
             collider.enabled = false;
+
+            GranularSynth.instance.FuckUpSound();
         }
     }
 

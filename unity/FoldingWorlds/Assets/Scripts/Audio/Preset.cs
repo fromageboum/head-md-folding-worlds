@@ -1,0 +1,44 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[System.Serializable]
+public class Preset
+{
+    public int playbackSpeed;
+    public int grainSize;
+    public int grainStep;
+
+    public float guiPlaybackSpeed;
+    public float guiGrainSize;
+    public float guiGrainStep;
+
+    public float envMean;
+    public float envSd;
+    public bool envelopeOn;
+
+    public Preset(GranularSynth synth)
+    {
+        playbackSpeed = synth.playbackSpeed;
+        grainSize = synth.grainSize;
+        grainStep = synth.grainStep;
+
+        guiPlaybackSpeed = synth.guiPlaybackSpeed;
+        guiGrainSize = synth.guiGrainSize;
+        guiGrainStep = synth.guiGrainStep;
+
+        envMean = synth.envMean;
+        envSd = synth.envSd;
+        envelopeOn = synth.envelopeOn;
+    }
+
+    public static Preset CreateRandomPreset(GranularSynth synth) {
+        Preset p = new Preset(synth);
+
+        //p.playbackSpeed = (int)Random.Range(-1.0f, 1.0f);
+        p.grainSize = (int)Random.Range(1000.0f, 1300.0f);
+        p.grainStep = (int)Random.Range(-50.0f, 50.0f);
+
+        return p; 
+    }
+}
