@@ -14,7 +14,7 @@ Technical requirements :
  - Stationnary 
 
 Main image : 
-![Mainimage](./img/mainbitch.png)
+![mainimage](./img/mainbitch.png)
 
 Secondary image : 
 
