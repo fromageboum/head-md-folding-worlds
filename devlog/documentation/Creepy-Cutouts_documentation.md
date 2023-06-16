@@ -2,7 +2,7 @@
 
 Tibor Udvari & Faustine Périllaud
 
-Guide the creature through a folding  and labyrinthic environment.
+Guide the creature through a folding  environment.
 
  Pitch : 
  
@@ -13,3 +13,10 @@ Technical requirements :
  - right controller
  - Stationnary 
 
+Main image : 
+![Mainimage](./img/mainbitch.png)
+
+Secondary image : 
+
+![secondaryimage](./img/sidechick1.png)
+![secondaryimage](./img/sidechick2.png)
