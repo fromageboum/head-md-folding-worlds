@@ -2,7 +2,7 @@
 
 Tibor Udvari & Faustine Périllaud
 
-Guide the creature through a folding  environment.
+Guide the creature through a folding  environment and discover it's many paths.
 
  Pitch : 
  
