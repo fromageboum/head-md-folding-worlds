@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider))]
-public class TileVisibilityActivator : MonoBehaviour
+public class SoundFuckUpActivator : MonoBehaviour
 {
+
     public List<Tile> tiles;
 
     public bool targetVisibility;
@@ -24,21 +24,12 @@ public class TileVisibilityActivator : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            StartCoroutine(_TriggerVisibility());
+            GranularSynth.instance.FuckUpSound();
             col.enabled = false;
         }
     }
 
-    IEnumerator _TriggerVisibility()
-    {
-        yield return new WaitForSeconds(delay);
 
-        foreach (Tile tile in tiles)
-        {
-            tile.Hidden = !targetVisibility;
-            yield return new WaitForSeconds(stagger);
-        }
-    }
 
     private void OnDrawGizmosSelected()
     {

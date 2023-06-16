@@ -35,10 +35,27 @@ public class Preset
     public static Preset CreateRandomPreset(GranularSynth synth) {
         Preset p = new Preset(synth);
 
-        //p.playbackSpeed = (int)Random.Range(-1.0f, 1.0f);
-        p.grainSize = (int)Random.Range(1000.0f, 1300.0f);
-        p.grainStep = (int)Random.Range(-50.0f, 50.0f);
+        // Make it -1 or 1,    -1 
+        p.playbackSpeed = Random.Range(0.0f, 1f) > 0.5f ? -1 : 1;
+        p.grainSize = (int)GetBiasedRandom(1000.0f, 1300.0f);
+        p.grainStep = (int)GetBiasedRandom(-20.0f, 10.0f);
 
         return p; 
+    }
+
+    private static float GetBiasedRandom(float min, float max)
+    {
+        float mid = (min + max) / 2;
+        float biasedRandom = Mathf.Lerp(min, max, Mathf.Pow(Random.value, 2));
+
+        // Flip half the values to cover both sides.
+        if (Random.value < 0.5f)
+        {
+            return mid + (mid - biasedRandom);
+        }
+        else
+        {
+            return biasedRandom;
+        }
     }
 }

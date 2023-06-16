@@ -14,7 +14,8 @@ public class LevelFinished : MonoBehaviour
             Collider collider = GetComponent<Collider>();
             collider.enabled = false;
 
-            GranularSynth.instance.FuckUpSound();
+            GranularSynth.instance.ReturnSoundToNormal();
+            //GranularSynth.instance.FuckUpSound();
         }
     }
 
