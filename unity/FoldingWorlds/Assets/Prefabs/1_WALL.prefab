@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 234668948, guid: 6aa59f8bc0e89a241b52f2da2f664323, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 234668952, guid: 6aa59f8bc0e89a241b52f2da2f664323, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 716256924, guid: 6aa59f8bc0e89a241b52f2da2f664323, type: 3}
+      propertyPath: m_Effectors.Array.data[0].m_Style.shape
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2337600454659842243, guid: 6aa59f8bc0e89a241b52f2da2f664323, type: 3}
       propertyPath: m_Name
       value: 1_WALL

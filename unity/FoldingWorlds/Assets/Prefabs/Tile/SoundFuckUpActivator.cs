@@ -5,12 +5,6 @@ using UnityEngine;
 public class SoundFuckUpActivator : MonoBehaviour
 {
 
-    public List<Tile> tiles;
-
-    public bool targetVisibility;
-    public float delay = 0f;
-    public float stagger = 0.25f;
-
     Collider col;
 
     private void Start()
@@ -33,16 +27,10 @@ public class SoundFuckUpActivator : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = !targetVisibility ? Color.red : Color.green;
+        Gizmos.color = Color.cyan;
         Gizmos.DrawWireCube(GetComponent<Collider>().bounds.center, GetComponent<Collider>().bounds.size);
 
-        foreach (Tile tile in tiles)
-        {
-            if (tile != null)
-            {
-                Gizmos.DrawLine(transform.position, tile.transform.position);
-            }
-        }
+
     }
 
 }
