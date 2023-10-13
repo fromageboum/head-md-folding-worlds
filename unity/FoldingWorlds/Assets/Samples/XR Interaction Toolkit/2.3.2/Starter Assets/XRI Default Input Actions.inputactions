@@ -1046,6 +1046,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Creepy Cutouts – Calibration",
+                    "type": "Button",
+                    "id": "397a8447-2ee5-4576-b791-f9ca9d9053ea",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1255,6 +1264,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Aim Flags",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "964319c4-c9a7-4873-bdfc-6bc58aa63d19",
+                    "path": "<XRController>{RightHand}/gripButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Creepy Cutouts – Calibration",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
