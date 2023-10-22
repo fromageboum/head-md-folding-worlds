@@ -13,7 +13,7 @@ public AnimationCurve c;
 float initialRotation;
     private void Start()
     {
-        initialRotation = transform.eulerAngles.y;
+        initialRotation = transform.localEulerAngles.y;
 
     }
 
@@ -29,7 +29,7 @@ float initialRotation;
        
     
         
-        transform.rotation = Quaternion.Euler(0f, initialRotation + deltaRotation, 0f);
+        transform.localRotation = Quaternion.Euler(0f, initialRotation + deltaRotation, 0f);
         
         }
 
