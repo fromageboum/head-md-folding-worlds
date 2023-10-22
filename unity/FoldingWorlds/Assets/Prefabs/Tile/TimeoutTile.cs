@@ -23,7 +23,7 @@ public class TimeoutTile : MonoBehaviour
         xrSimpleInteractable.hoverExited.AddListener(OnFlashlightExited);
     }
 
-    private void OnFlashlightEntered(HoverEnterEventArgs arg0)
+    public void OnFlashlightEntered(HoverEnterEventArgs arg0)
     {
         flashedWithFlashLight = true;
         tile.OpenTile();
