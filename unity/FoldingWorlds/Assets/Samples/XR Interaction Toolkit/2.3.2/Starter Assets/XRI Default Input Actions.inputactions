@@ -2148,6 +2148,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Creepy Cutouts Right Hand Orientation",
+                    "type": "Button",
+                    "id": "39dd5ddf-7072-4c27-8bdf-113eb6932d1a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -2159,6 +2168,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "FPSCounterShow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "447bc5fd-f1ae-49d9-9c7f-7c77e7a2fef9",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Creepy Cutouts Right Hand Orientation",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
