@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using VLB;
 
 namespace CreepyCutouts
@@ -13,6 +12,8 @@ namespace CreepyCutouts
         Light _light;
         VolumetricLightBeamSD volumetricLightBeam;
         AudioSource audioSource;
+
+        public GameObject[] ObjectsToToggle;
 
         private void Start()
         {
@@ -36,6 +37,10 @@ namespace CreepyCutouts
             _light.enabled = !_light.enabled;
             volumetricLightBeam.enabled = _light.enabled;
             audioSource.Play();
+            foreach (var item in ObjectsToToggle)
+            {
+                item.SetActive(!item.activeSelf);
+            }
         }
 
     }
