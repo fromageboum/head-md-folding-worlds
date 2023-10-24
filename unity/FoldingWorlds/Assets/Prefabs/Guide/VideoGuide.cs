@@ -13,10 +13,13 @@ public class VideoGuide : MonoBehaviour
     public InputActionReference sideButtonReference;
     GameObject videoGuide;
 
+    public static GameObject videoGuideSingleton;
+
     // todo get the global direction vector to see if perpendicular to the table or not
 
     private void Start()
     {
+        videoGuideSingleton = gameObject;
         videoGuide = GetComponentInChildren<VideoPlayer>().gameObject;
     }
 
@@ -33,8 +36,10 @@ public class VideoGuide : MonoBehaviour
 
     private void CalibrateAndStart(InputAction.CallbackContext callbackContext)
     {
-        videoGuide.SetActive(false);
+        //videoGuide.SetActive(false);
         Debug.Log("SHOULD START THE CALIBRATION NOW");
+        
+  
     }
 
 }

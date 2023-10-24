@@ -60,6 +60,8 @@ public class CalibrateTablePosition : MonoBehaviour
         playerAgent.enabled = true;
         
         OnCalibration?.Invoke();
+
+        VideoGuide.videoGuideSingleton.SetActive(false);
     }
 
     private bool ControllerPositionIsValid()
