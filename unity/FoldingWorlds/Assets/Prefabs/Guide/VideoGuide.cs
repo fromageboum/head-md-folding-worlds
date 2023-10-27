@@ -11,16 +11,16 @@ public class VideoGuide : MonoBehaviour
     // Check when button is pressed remove the thing
 
     public InputActionReference sideButtonReference;
-    GameObject videoGuide;
+    GameObject guide;
 
-    public static GameObject videoGuideSingleton;
+    public static GameObject guideSingleton;
 
     // todo get the global direction vector to see if perpendicular to the table or not
 
     private void Start()
     {
-        videoGuideSingleton = gameObject;
-        videoGuide = GetComponentInChildren<VideoPlayer>().gameObject;
+        guideSingleton = gameObject;
+        guide = GetComponentInChildren<VideoPlayer>().gameObject;
     }
 
     private void OnEnable()
@@ -36,7 +36,7 @@ public class VideoGuide : MonoBehaviour
 
     private void CalibrateAndStart(InputAction.CallbackContext callbackContext)
     {
-        //videoGuide.SetActive(false);
+        //guide.SetActive(false);
         Debug.Log("SHOULD START THE CALIBRATION NOW");
         
   

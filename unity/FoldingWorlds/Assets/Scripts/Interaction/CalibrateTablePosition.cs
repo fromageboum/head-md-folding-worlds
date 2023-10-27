@@ -61,7 +61,7 @@ public class CalibrateTablePosition : MonoBehaviour
         
         OnCalibration?.Invoke();
 
-        VideoGuide.videoGuideSingleton.SetActive(false);
+        VideoGuide.guideSingleton.SetActive(false);
     }
 
     private bool ControllerPositionIsValid()

@@ -2559,7 +2559,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248799252}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: b617b170cf74145dbb8d8c24423e8104, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 5b3b542754d92f347bd5e2b61ada27d6, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -6292,8 +6292,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.9622642, g: 0.9032201, b: 0.86694556, a: 1}
+  m_Intensity: 0.5
   m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -6806,6 +6806,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9069881222424942481, guid: c3235cc23d0f84ba1aa932d789ae9acd, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 5b3b542754d92f347bd5e2b61ada27d6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3235cc23d0f84ba1aa932d789ae9acd, type: 3}
 --- !u!1001 &1472786349
