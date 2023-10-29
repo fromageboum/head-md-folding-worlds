@@ -6,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 using DG.Tweening;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine.UIElements;
+using Unity.AI.Navigation.Samples;
 
 public class Tile : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class Tile : MonoBehaviour
         {
             hidden = value;
             float target = hidden ? 0f : 1f;
-
+            
             if (Application.isPlaying)
             {
                 //transform.DOScale(target, 0.3f).SetEase(Ease.InOutQuad);
@@ -54,6 +55,7 @@ public class Tile : MonoBehaviour
         }
     }
 
+    private bool pCrossable;
     public bool Crossable {
         get
         {
@@ -61,6 +63,7 @@ public class Tile : MonoBehaviour
         }
         set
         {
+            pCrossable = crossable;
             crossable = value;
             if (meshRenderer != null) {
                 meshRenderer.material.color = value ? Color.green : Color.red;
@@ -107,6 +110,12 @@ public class Tile : MonoBehaviour
         navMeshSourceTag = GetComponentInChildren<NavMeshSourceTag>();
         xrSimpleInteractable = GetComponent<XRSimpleInteractable>();
         animators = new List<Animator>(GetComponentsInChildren<Animator>());
+
+        for (int i = 1; i < animators.Count; i++)
+        {
+            Animator animator = animators[i];
+            animator.transform.localPosition = Vector3.zero + Vector3.up * 0.00001f;
+        }
     }
 
     public void OpenTile()
@@ -118,7 +127,7 @@ public class Tile : MonoBehaviour
                 animator.SetBool("open", true);
             }
         }
-        //Crossable = true;
+        Crossable = true;
     }
 
     public void CloseTile()
@@ -137,6 +146,21 @@ public class Tile : MonoBehaviour
     private void Update()
     {
         CheckAnimatorsState();
+        
+        /*
+         * This makes it crash 
+        if (pCrossable != Crossable)
+        {
+            LocalNavMeshBuilder.instance.UpdateNavMesh(true);
+        }
+        */
+
+        /*
+         * Color crossColor = !Crossable ? Color.red : Color.green;
+        Debug.DrawLine(transform.position, transform.position + transform.up, crossColor);
+
+        Vector3 debug = Crossable ? new Vector3(1f, 1.2f, 1f) : Vector3.one;
+        transform.localScale = debug;*/
     }
 
     private void CheckAnimatorsState()
@@ -146,7 +170,8 @@ public class Tile : MonoBehaviour
         {
             if (animator != null)
             {
-                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("REopened"))
+                bool isOpenOrOpening = animator.GetCurrentAnimatorStateInfo(0).IsName("REopened") || animator.GetCurrentAnimatorStateInfo(0).IsName("REopening");
+                if (!isOpenOrOpening)
                 {
                     allAnimatorsOpened = false;
 

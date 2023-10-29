@@ -1782,6 +1782,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1023056414932261749, guid: 0e5cb0c09d589406dad004f56a6da449, type: 3}
+      propertyPath: m_Center.z
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 1023056414932261750, guid: 0e5cb0c09d589406dad004f56a6da449, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1835,8 +1839,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1023056414932261754, guid: 0e5cb0c09d589406dad004f56a6da449, type: 3}
+      propertyPath: m_Speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023056414932261754, guid: 0e5cb0c09d589406dad004f56a6da449, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023056414932261754, guid: 0e5cb0c09d589406dad004f56a6da449, type: 3}
+      propertyPath: m_Acceleration
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023056414932261754, guid: 0e5cb0c09d589406dad004f56a6da449, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 10700
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023056414932261754, guid: 0e5cb0c09d589406dad004f56a6da449, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3554061290588560936, guid: 0e5cb0c09d589406dad004f56a6da449, type: 3}
       propertyPath: m_IsActive
@@ -2006,6 +2026,20 @@ NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 1023056414932261754, guid: 0e5cb0c09d589406dad004f56a6da449, type: 3}
   m_PrefabInstance: {fileID: 209060911}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &209060930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209060913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a2f1582aebc774bb92b78346255247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sampleRadius: 1.5
+  allowedOffMeshDistance: 1
 --- !u!1 &211631565
 GameObject:
   m_ObjectHideFlags: 0

@@ -37,8 +37,11 @@ namespace Unity.AI.Navigation.Samples
         public int tileSize = 256;
         public bool preserveTilesOutsideBounds = false;
 
+        public static LocalNavMeshBuilder instance;
+
         IEnumerator Start()
         {
+            instance = this;
             while (true)
             {
                 UpdateNavMesh(true);
@@ -62,7 +65,7 @@ namespace Unity.AI.Navigation.Samples
             m_Instance.Remove();
         }
     
-        void UpdateNavMesh(bool asyncUpdate = false)
+        public void UpdateNavMesh(bool asyncUpdate = false)
         {
             //Debug.Log("Update nav mesh");
             NavMeshSourceTag.Collect(ref m_Sources);
